@@ -1,0 +1,33 @@
+{
+  "name": "react-sequelize-tutorial",
+  "version": "1.0.0",
+  "description": "NOde.js Rest Apis with Express, Sequelize and MySQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsumme1/React-Sequelize-Tutorial.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "mysql",
+    "rest",
+    "api"
+  ],
+  "author": "jsummers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jsumme1/React-Sequelize-Tutorial/issues"
+  },
+  "homepage": "https://github.com/Jsumme1/React-Sequelize-Tutorial#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.3"
+  }
+}
