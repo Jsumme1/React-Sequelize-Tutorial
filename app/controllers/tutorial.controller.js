@@ -1,26 +1,26 @@
 // create CRUD functions with sequelize
-
 const db = require('../models');
 const Tutorial = db.tutorials;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
-  // validate request
+  // Validate request
   if (!req.body.title) {
     res.status(400).send({
-      message: 'Content can not be empty',
+      message: 'Content can not be empty!',
     });
     return;
   }
 
-  // create tutorial
+  // Create a Tutorial
   const tutorial = {
     title: req.body.title,
     description: req.body.description,
     published: req.body.published ? req.body.published : false,
   };
-  // save tutorial in the db
+
+  // Save Tutorial in the database
   Tutorial.create(tutorial)
     .then((data) => {
       res.send(data);
@@ -33,7 +33,7 @@ exports.create = (req, res) => {
     });
 };
 
-// Retrieve all Tutorials from the database/ find by title
+// Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
   const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
@@ -138,7 +138,7 @@ exports.deleteAll = (req, res) => {
     });
 };
 
-// Find all published Tutorials
+// find all published Tutorial
 exports.findAllPublished = (req, res) => {
   Tutorial.findAll({ where: { published: true } })
     .then((data) => {
